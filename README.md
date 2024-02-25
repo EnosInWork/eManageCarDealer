@@ -1,8 +1,8 @@
 # eManageCarDealer
  
-#How to open ?
+How to open ?
 - TriggerClientEvent('openManageCardealer', source)
-#or
+**or**
 - /manageCardealer
 
 https://discord.gg/5dev
