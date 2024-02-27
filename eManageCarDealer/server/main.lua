@@ -47,7 +47,7 @@ AddEventHandler('renameVehicleCategory', function(oldName, newName)
     local query = 'UPDATE '..Config.Categorie_Table..' SET label = @newName WHERE label = @oldName'
     local params = {['@oldName'] = oldName, ['@newName'] = newName}
     ExecuteSql(query, params, function(rowsChanged)
-        if rowsChanged and rowsChanged > 0 then
+        if rowsChanged then
             TriggerClientEvent('eManageCarDealer:SendNotif', source, "Catégorie renommée avec succès", "success")
         else
             TriggerClientEvent('eManageCarDealer:SendNotif', source, "Erreur lors du renommage de la catégorie", "error")
